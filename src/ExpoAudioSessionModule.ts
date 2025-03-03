@@ -1,12 +1,8 @@
-import { NativeModule, requireNativeModule } from 'expo';
+import { NativeModule, requireNativeModule } from "expo";
 
-import { ExpoAudioSessionModuleEvents } from './ExpoAudioSession.types';
-
-declare class ExpoAudioSessionModule extends NativeModule<ExpoAudioSessionModuleEvents> {
-  PI: number;
-  hello(): string;
-  setValueAsync(value: string): Promise<void>;
+declare class ExpoAudioSessionModule extends NativeModule {
+  isOtherAudioPlaying(): boolean;
 }
 
 // This call loads the native module object from the JSI.
-export default requireNativeModule<ExpoAudioSessionModule>('ExpoAudioSession');
+export default requireNativeModule<ExpoAudioSessionModule>("ExpoAudioSession");
