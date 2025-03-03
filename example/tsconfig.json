@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-audio-session": ["../src/index"],
+      "expo-audio-session/*": ["../src/*"]
+    }
+  }
+}
